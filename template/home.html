@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>login</h2>
+    <form action="login" method="post">{% csrf_token %}
+        <input type="text" name="user_name" placeholder="enter the user name">
+        <input type="text" name="password" placeholder="enter the password">
+        <input type="submit">
+
+        {% for message in messages %}
+    <h3>message</h3>
+    {% endfor %}
+
+    </form>
+</body>
+</html>  

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>sing up</h1>
+    <form action="" method="post">{% csrf_token %}
+        <input type="text"name="frist_name" placholder="enter the frist name"><br><br>
+        <input type="text"name="last_name" placholder="enter the last name"><br><br>
+        <input type="text"name="user_name" placholder="enter the user name"><br><br>
+        <input type="email"name="email" placholder="enter the email"><br><br>
+        <input type="number" name="mobile" placholder="enter the mobile number"><br><br>
+        <input type="passwoed"name="password1" placholder="enter the password1"><br><br>
+        <input type="text"name="password2" placholder="enter the password2"><br><br>
+        
+    </form>
+    {% for message in messages %}
+    <h2>{{message}}</h2>
+    
+    {% endfor %}
+</body>
+</html>
